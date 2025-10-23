@@ -5,67 +5,84 @@
  
 }
 
-/* Set your preferred colors */
-html, body {
-  background-color: #051015 !important; /* page background */
-  color: #F7EEEE !important;           /* text color */
+@-moz-document domain(google.com) {
+  * {
+    background-color: #051015 !important;
+    color: #F7EEEE !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase !important;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase !important;
-}
 
+@-moz-document domain(youtube.com) {
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase !important;
+  }
+}
 
 
 
 /*TWITTER*/
+@-moz-document domain("x.com") {
+  html, body {
+    background-color: #051015 !important;
+    color: #F7EEEE !important;           
+  }
 
-/*Sidebar*/
-.css-175oi2r.r-aqfbo4.r-1pi2tsx.r-1xcajam.r-ipm5af .css-1jxf684 {
-  text-transform: uppercase !important;
-}
-
-/*New Post*/
-div[style="color: rgb(29, 155, 240);"] span,
-span[style="color: rgb(29, 155, 240);"] {
-    color: rgb(227, 233, 233) !important;
+  h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase !important;
-}
+  }
 
-/*Usernames*/
-.css-175oi2r.r-zl2h9q span > span {
+
+  /*Sidebar*/
+  .css-175oi2r.r-aqfbo4.r-1pi2tsx.r-1xcajam.r-ipm5af .css-1jxf684 {
     text-transform: uppercase !important;
+  }
+
+  /*New Post*/
+  div[style="color: rgb(29, 155, 240);"] span,
+  span[style="color: rgb(29, 155, 240);"] {
+      color: rgb(227, 233, 233) !important;
+      text-transform: uppercase !important;
+  }
+
+  /*Usernames*/
+  .css-175oi2r.r-zl2h9q span > span {
+      text-transform: uppercase !important;
+  }
+
+  /* Only target the blue Subscribe button */
+  a[href="/i/premium_sign_up"]:not([data-testid]) {
+      background-color: var(--neon-blue) !important; 
+      border-color: transparent !important;
+  }
+  a[href="/i/premium_sign_up"]:not([data-testid]) div[style*="color"] {
+      color: black !important; /* override inline color */
+  }
+  a[href="/i/premium_sign_up"]:not([data-testid]):hover {
+      background-color: var(--neon-blue) !important;
+  }
+
+
+  div[role="tablist"][data-testid="ScrollSnap-List"] svg {
+      color: var(--neon-blue) !important;
+  }
+
+
+  /* Outer container of the search bar */
+  div.r-aqfbo4.r-kemksi.r-18u37iz.r-1h3ijdo.r-6gpygo {
+      background-color: transparent !important; /* or any color you want */
+      box-shadow: none !important; /* remove any shadow */
+  }
+
+
+  /*todays news - "5 hours ago  News  39.6K posts"*/
+  div.css-175oi2r.r-6koalj.r-eqz5dr span[dir="ltr"] span {
+      color: var(--neon-blue) !important;
+  }
+
 }
-
-/* Only target the blue Subscribe button */
-a[href="/i/premium_sign_up"]:not([data-testid]) {
-    background-color: var(--neon-blue) !important; 
-    border-color: transparent !important;
-}
-a[href="/i/premium_sign_up"]:not([data-testid]) div[style*="color"] {
-    color: black !important; /* override inline color */
-}
-a[href="/i/premium_sign_up"]:not([data-testid]):hover {
-    background-color: var(--neon-blue) !important;
-}
-
-
-div[role="tablist"][data-testid="ScrollSnap-List"] svg {
-    color: var(--neon-blue) !important;
-}
-
-
-/* Outer container of the search bar */
-div.r-aqfbo4.r-kemksi.r-18u37iz.r-1h3ijdo.r-6gpygo {
-    background-color: transparent !important; /* or any color you want */
-    box-shadow: none !important; /* remove any shadow */
-}
-
-
-/*todays news - "5 hours ago  News  39.6K posts"*/
-div.css-175oi2r.r-6koalj.r-eqz5dr span[dir="ltr"] span {
-    color: var(--neon-blue) !important;
-}
-
 
 
